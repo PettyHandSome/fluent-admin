@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:res="clr-namespace:FluentAdmin.Properties"
         xmlns:local="clr-namespace:FluentAdmin.View"
+        xmlns:iconPacks="using:MahApps.Metro.IconPacks"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
