@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FluentAdmin
+namespace FluentAdmin.View
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// LoginWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow
     {
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
         }

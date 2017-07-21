@@ -7,10 +7,10 @@ using System.Windows;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("FluentAdmin")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Fluent Admin")]
+[assembly: AssemblyDescription("一款基于 WPF 开发桌面后台管理系统，探索全新的 Fluent Design 视觉体验。")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("OSI.Ltd")]
 [assembly: AssemblyProduct("FluentAdmin")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
