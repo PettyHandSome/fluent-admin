@@ -16,3 +16,29 @@ Fluent 设计语言将帮助用户体验从从静态矩形到到“打破自由�
 微软流畅设计体系分为五个元素：**Light**（**光感**）、**Depth**（**深度**）、**Motion**（**动效**）、**Material**（**材质**）、**Scale**（**缩放**）。同时，亚克力材料的使用可以让设计更加富有深度，还提供细腻的场景转换，保持上下文的衔接并提供良好的连续性，新的灯光效果也可以将焦点聚集在交互式元素上。
 
 如果你对 Fluent Design System 感兴趣，点击查看 [Fluent Design System 官方网站](http://fluent.microsoft.com/) 。
+
+
+## 欢迎使用
+
+### 开发工具
+
+ - Visual Studio IDE 2017（Community / Professional / Enterprise）
+
+或
+
+ - Visual Studio Code（Windows / macOS / Linux）
+
+ 或
+ 
+  - 其它你喜欢的集成开发环境/文本编辑器；
+
+### 开发环境
+
+ - Microsoft .NET Framework 4.5.2
+
+### 依赖扩展
+
+ - MvvmLight v5.3.0
+ - MahApps.Metro v1.5.0
+ - MahApps.Metro.IconPacks v1.9.0
+
