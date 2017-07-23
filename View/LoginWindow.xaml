@@ -1,4 +1,6 @@
-﻿<Controls:MetroWindow x:Class="FluentAdmin.View.LoginWindow"
+﻿<Controls:MetroWindow 
+        x:Name="loginWindow"
+        x:Class="FluentAdmin.View.LoginWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,8 +10,101 @@
         xmlns:iconPacks="using:MahApps.Metro.IconPacks"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource LoginWindow}">
+    <Window.Resources>
+        <Style x:Key="LoginWindow" TargetType="Controls:MetroWindow">
+            <Setter Property="Width" Value="412"/>
+            <Setter Property="Height" Value="364"/>
+            <Setter Property="Topmost" Value="True"/>
+            <Setter Property="ShowTitleBar" Value="False"/>
+            <Setter Property="ResizeMode" Value="CanMinimize"/>
+            <Setter Property="AllowsTransparency" Value="True"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="GlowBrush" Value="{StaticResource AccentColorBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource AccentColorBrush}"/>
+            <Setter Property="Icon" Value="/FluentAdmin;component/Assets/Icons/Fluent.png"/>
+        </Style>
+    </Window.Resources>
 
-    </Grid>
+
+    <StackPanel Margin="36" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <StackPanel.Resources>
+            <Style x:Key="LoginLogoStackPanel" TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+
+            <Style x:Key="LoginLogoImage" TargetType="Image">
+                <Setter Property="Width" Value="28"/>
+                <Setter Property="Height" Value="28"/>
+                <Setter Property="Stretch" Value="UniformToFill"/>
+                <Setter Property="Source" Value="/FluentAdmin;component/Assets/Icons/Fluent.png"/>
+            </Style>
+
+            <Style x:Key="LoginLogoTextBlock" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="22"/>
+                <Setter Property="Foreground" Value="{StaticResource GrayBrush2}"/>
+                <Setter Property="Text" Value="{x:Static res:Resources.logoTextBlock}"/>
+            </Style>
+
+            <Style x:Key="LoginTitleTextBlock" TargetType="TextBlock">
+                <Setter Property="Margin" Value="0 8"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="Foreground" Value="#262626"/>
+                <Setter Property="Text" Value="{x:Static res:Resources.loginTextBlock}"/>
+            </Style>
+
+            <Style x:Key="LoginSubtitleTextBlock" TargetType="TextBlock">
+                <Setter Property="Margin" Value="0 8"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Foreground" Value="#262626"/>
+                <Setter Property="Text" Value="{x:Static res:Resources.loginSubtitleTextBlock}"/>
+            </Style>
+
+            <Style x:Key="LoginHelpHyperlink" TargetType="Hyperlink">
+                <Setter Property="TextBlock.TextDecorations" Value="{x:Null}"/>
+                <Setter Property="ToolTip" Value="{x:Static res:Resources.loginSubtitleHyperlink}"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="{StaticResource GrayBrush2}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="LoginAccoutTextBox" BasedOn="{StaticResource MetroTextBox}" TargetType="TextBox">
+                <Setter Property="Height" Value="36"/>
+                <Setter Property="Margin" Value="0 8"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style>
+
+            <Style x:Key="LoginSubmitButton" BasedOn="{StaticResource MetroFlatButton}"  TargetType="Button">
+                <Setter Property="MinHeight" Value="36"/>
+                <Setter Property="Margin" Value="0 8"/>
+                <Setter Property="Content" Value="下一步"/>
+                <!--<Setter Property="Foreground"  Value="{StaticResource AccentColorBrush}"/>-->
+            </Style>
+        </StackPanel.Resources>
+
+        <StackPanel x:Name="logoStackPanel" Style="{StaticResource LoginLogoStackPanel}">
+            <Image x:Name="logoImage" Style="{StaticResource LoginLogoImage}"/>
+            <TextBlock x:Name="logoTextBlock" Style="{StaticResource LoginLogoTextBlock}"/>
+        </StackPanel>
+
+        <TextBlock x:Name="loginTitleTextBlock" Style="{StaticResource LoginTitleTextBlock}"/>
+
+        <TextBlock x:Name="loginSubtitleTextBlock" Style="{StaticResource LoginSubtitleTextBlock}">
+                <Hyperlink x:Name="loginSubtitleHyperlink" Style="{StaticResource LoginHelpHyperlink}">这是什么？</Hyperlink>
+        </TextBlock>
+
+        <TextBox x:Name="loginAccoutTextBox" Controls:TextBoxHelper.ClearTextButton="True" Style="{StaticResource LoginAccoutTextBox}" Controls:TextBoxHelper.Watermark="梵蒂冈"/>
+
+        <Button x:Name="loginSubmitButton" Style="{StaticResource LoginSubmitButton}"/>
+
+        <TextBlock x:Name="loginHelpTextBlock" Style="{StaticResource LoginSubtitleTextBlock}">
+                <Hyperlink x:Name="loginHelpHyperlink" Style="{StaticResource LoginHelpHyperlink}">这是什么？</Hyperlink>
+        </TextBlock>
+    </StackPanel>
 </Controls:MetroWindow>
